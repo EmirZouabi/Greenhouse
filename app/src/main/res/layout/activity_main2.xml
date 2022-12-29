@@ -1,46 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/temperature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="temperature" />
-
-        <TextView
-            android:id="@+id/Humidity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Humidity" />
-
-        <com.github.lzyzsd.circleprogress.ArcProgress
-            android:id="@+id/xd"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_gravity="center"
-            app:arc_bottom_text="Temperature"
-            app:arc_bottom_text_size="23dp"
-            app:arc_finished_color="#03A9F4"
-            app:arc_max="100"
-            app:arc_progress="25"
-            app:arc_suffix_text="C°"
-            app:arc_suffix_text_padding="1dp"
-            app:arc_suffix_text_size="24dp"
-            app:arc_text_color="@color/teal_200"
+    tools:context=".MainActivity2"
+    android:background="@drawable/img_1">
 
 
-            app:arc_unfinished_color="@color/white" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:textColor="#1A2F7A"
+        android:text="humidity"/>
 
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/donutprogress"
+        android:layout_width="220dp"
+        app:donut_inner_bottom_text="Humidity"
+        app:donut_text_color="#1A2F7A"
+        app:donut_text_size="49dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="40dp"
+        app:donut_unfinished_color="@color/white"
+        app:donut_finished_color="#1A2F7A"
+        app:donut_progress="30" />
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.github.lzyzsd.circleprogress.ArcProgress
+        android:id="@+id/arcprogress"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="40dp"
+        app:arc_bottom_text="Temperature"
+        app:arc_text_size="55dp"
+        app:arc_bottom_text_size="20dp"
+        app:arc_suffix_text_padding="10dp"
+        app:arc_text_color="#1A2F7A"
+        app:arc_finished_color="#1A2F7A"
+        app:arc_unfinished_color="@color/white"
+        app:arc_progress="20"
+        app:arc_suffix_text=" C°"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnmore"
+        android:backgroundTint="#1A2F7A"
+        android:text="See More "
+        />
+</LinearLayout>

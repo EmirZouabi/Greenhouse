@@ -5,10 +5,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Welcome"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Green_House_Dashboard">
+        <activity
+            android:name=".MainActivity4Courbe"
+            android:exported="false" />
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
